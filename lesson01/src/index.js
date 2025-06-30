@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
+import App from './component/App3';
 import reportWebVitals from './reportWebVitals';
-import App2 from './component/App2';
+// import App2 from './component/App2';
 // import는 외부 파일의 함수, 라이브러리 사용할 때
 //          미리 가져오기 (메모리 로드)
 
@@ -14,7 +14,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     {/* <App /> */}
-    <App2 />
+    <App />
   </React.StrictMode>
 );
 
