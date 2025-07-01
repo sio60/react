@@ -1,0 +1,13 @@
+.theading{
+    background-color: tomato;
+    color: white;
+}
+.theading, .tdata{
+    width: 150px;
+    border: 1px solid tomato;
+    padding: 7px 12px;
+    text-align: center;
+}
+.title{
+    padding: 7px 12px;
+}

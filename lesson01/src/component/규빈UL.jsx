@@ -1,10 +1,15 @@
 //day01_04: 데이터를 전달 받아 컴포넌트에서 사용하기
 //
 
-export default function 규빈UL({characters}) {
+export default function 규빈UL({characters, title}) {
+    //객체 형식으로 저장된 스타일 값 정의, 적용의 style 속성에서 함
+     const titlestyle = {
+        color : 'tomato',
+        border : '1px solid tomato'
+     }
   return (
     <div>
-        <h3>Gyubin's characters</h3>
+        <h3 style={titlestyle}>{title}</h3>
         <ul>
             {characters.map((item, idx)=>(
                 <li key={idx}>{item}</li>
