@@ -9,6 +9,7 @@ export default function 규빈UL({characters, title}) {
      }
   return (
     <div>
+        
         <h3 style={titlestyle}>{title}</h3>
         <ul>
             {characters.map((item, idx)=>(
