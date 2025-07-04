@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
-
+//day3_01: 배열이 state 변수일 때, 생태값 변경 함수 테스트
+//여기에서 사용한 js 문법 테스트 public/ex6test에 있음
 export default function App(){
     const intiVal = [ 
     {

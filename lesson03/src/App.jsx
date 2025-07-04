@@ -2,7 +2,9 @@ import { useRef, useState } from 'react'
 import TodoList from './components/TodoList'
 import TodoInsert from './components/TodoInsert'
 import TodoTemplate from './components/TodoTemplate'
-
+//day03_04 : 컴포넌트 리팩토링해서  사용
+//day04_01 : children 속성 사용해서 완성함
+//           useRef() 훅으로 재렌더링 횟수 비교 (App_v1.jsx)
 export default function App() {
   const renderCount = useRef(0) //useRef는 리액트 함수(훅)
   renderCount.current +=1

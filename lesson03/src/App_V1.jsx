@@ -9,7 +9,9 @@ import {
   MdCheckBoxOutlineBlank,
   MdRemoveCircleOutline,
 } from "react-icons/md";
-
+// day03_02 : 배열 상태값 변경을 ui로 구현
+// => components 폴더에서 컴포넌트로 만들어서 리팩토링
+//    (day03_03)
 // 추가 패키지 설치 :   npm i sass react-icons
 
 function App() {
@@ -93,7 +95,6 @@ function App() {
     const yn = window.confirm(`일정 ${id}:${text}를 삭제하십니까?`);
     if (yn) handleRemove(id);
   };
-
   return (
     <div className="container"> 
       <div className="TodoTemplate">
