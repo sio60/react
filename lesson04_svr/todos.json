@@ -1,0 +1,42 @@
+[
+  {
+    "_id": "68661be3ee80654ecba924b1",
+    "id": 1,
+    "text": "리액트 수업 복습",
+    "checked": true
+  },
+  {
+    "_id": "68661be3ee80654ecba924b2",
+    "id": 2,
+    "text": "리액트 프로젝트 기획",
+    "checked": false
+  },
+  {
+    "_id": "686632da77df9d367eca4ba0",
+    "id": 4,
+    "text": null,
+    "checked": false,
+    "createdAt": "2025-07-03T07:35:54.162Z"
+  },
+  {
+    "_id": "6866342ceadcf8ba1b4cf21b",
+    "id": 2,
+    "text": null,
+    "checked": false,
+    "createdAt": "2025-07-03T07:41:32.667Z"
+  },
+  {
+    "_id": "686634a3eadcf8ba1b4cf21c",
+    "id": 2,
+    "text": null,
+    "checked": false,
+    "createdAt": "2025-07-03T07:43:31.284Z"
+  },
+  {
+    "_id": "6866384291d46d81530de957",
+    "id": 5,
+    "text": null,
+    "checked": false,
+    "createdAt": "2025-07-03T07:58:58.133Z"
+  }
+]
