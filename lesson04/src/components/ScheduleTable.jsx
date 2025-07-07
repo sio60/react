@@ -113,3 +113,19 @@ export default function ScheduleTable() {
     </div>
   );
 }
+/* ScheduleTable.jsx 코드 분석
+
+1. {date, time, todo} 객체의 배열을 자료구조(데이터) 사용: schedules 변수
+            ㄴ time, todo는 배열
+   schedules 변수는 인덱스로 접근, map 메소드 콜백함수 인자로 한 개씩 한 개씩 저장
+
+   예시 : schedules.map ((sch, idx)=> 실행 코드에서 요소 한개씩 sch에 저장)
+  	ㄴ handleSelected(idx): 인덱스값 함수에 전달
+
+2. 1번 데이터 4개 중 하나를 선택(버튼 클릭)해서 상태값으로 관리
+   const [schedule, setSchedule] = useState(schedules[0]);
+
+3. 버튼 클릭할 때마다  schedule을 변경 => setSchedule(schedules[idx])
+
+4.3번에서 상태값 schedule을 변경하면 schedule을 사용하는 태그 요소의 출력이 변경(재렌더링)
+*참고: 기존 js는 dom을 직접 조작*/

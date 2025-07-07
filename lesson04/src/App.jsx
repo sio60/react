@@ -46,7 +46,9 @@ curl -X PUT http://localhost:5000/api/todos/33 ^
       setLoading(true)
       const options = {
         method: 'PUT',
+        //서버로 전송하는 데이터의 유형이 json
         headers: { 'Content-Type': 'application/json' },
+        //js객체를 json 문자열로 변환하여 전송
         body: JSON.stringify({ checked: newChecked })
       }
       // 백엔드 서버를 통해 db값 변경
@@ -137,3 +139,44 @@ curl -X PUT http://localhost:5000/api/todos/33 ^
     </div>
   )
 }
+/*
+1. 모든 데이터 가져오기
+ const response = await fetch(API_BASE_URL)
+
+ => todos 상태값을 db에서 조회한 모든 값으로 저장
+
+2. id로 지정한 번호의 데이터를 checked 수정 (몽고db값 변경)
+const options = {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ checked: newChecked })
+      }
+      const response = await fetch(`${API_BASE_URL}/${id}`, options)
+
+=> db를 변경하고 화면도 바꿔줘야함 => todos 상태값을 변경
+   
+ const newtodos = todos.map((item) =>
+          item.id === id ? { ...item, checked: !item.checked } : item)
+ setTodos(newtodos)
+3. id로 지정한 번호의 데이터를 삭제
+ const resp = await fetch(`${API_BASE_URL}/${id}`, { method: 'DELETE' })
+ // 재렌더링을 위해 상태값 todos 변경
+ fetchTodos()  방법 1) 다시 전체를 가져오기 위한 fetch 요청 함수 실행
+ todos.filter((t)=>t.id !== id) 방법 2) filter 메소드로 걸러내기
+
+4. 새로운 데이터 추가(id값을 만들어주는 게 필요)
+     const options = {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ text: text })
+      }
+      // "{\"text\":\"과제하기\"}" => json 문자열 (데이터를 송수신할 때 문자열로 합니다.)
+      //JSON.stringify : JS객체 {text: "과제하기"} 를 json 문자열로 변환
+      const response = await fetch(API_BASE_URL, options)
+
+      //todos 상태값을 변경할 때, 요청의 응답값을 추가, nodejs에서 추가한 데이터를 보내줌
+      const newTodo = await response.json()
+      setTodos([...todos, newTodo]) // 새로운 배열을 만들 때, 원래 todos 복사
+                                    // setTodos(todos.concat(newTodo))
+
+*/

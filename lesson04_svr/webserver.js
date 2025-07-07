@@ -3,7 +3,7 @@ import { MongoClient } from 'mongodb'
 import cors from 'cors'
 //node.js 백엔드(was) <-> 몽고디비 서버
 // 웹프레임워크(서버) 실행을 위한 객체 생성
-const app = express()
+const app = express() // get, post, put, patch, delate 요청을 처리하는 메소드를 지원
 const PORT = 5000     // 클라이언트 -> nodejs 백엔드 서버 연결 포트
 
 app.use(cors())   // 프론트엔드 백엔드접속에 필요
